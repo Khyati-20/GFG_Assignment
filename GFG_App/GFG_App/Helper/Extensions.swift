@@ -1,24 +1,13 @@
-//
-//  Extensions.swift
-//  GFG_App
-//
-//  Created by Khyati Dhawan on 01/03/22.
-//
 
 import Foundation
 import SwiftUI
 
 extension Image {
+    
     func fromData(url : URL) -> Image  {
-        if var componenets = URLComponents(string: url.absoluteString) {
-            componenets.query = nil
-//            if let data = try? Data(contentsOf: componenets.url!){
-            if let data = try? Data(contentsOf: url) {
-                return Image(uiImage: UIImage(data: data)!).resizable()
-            }
-            
-        
-    }
+        if let data = try? Data(contentsOf: url) {
+            return Image(uiImage: UIImage(data: data)!).resizable()
+        }
         return Image("")
     }
 }
@@ -52,7 +41,7 @@ extension Color {
 
 
 extension UIScreen{
-   static let screenWidth = UIScreen.main.bounds.size.width
-   static let screenHeight = UIScreen.main.bounds.size.height
-   static let screenSize = UIScreen.main.bounds.size
+    static let screenWidth = UIScreen.main.bounds.size.width
+    static let screenHeight = UIScreen.main.bounds.size.height
+    static let screenSize = UIScreen.main.bounds.size
 }

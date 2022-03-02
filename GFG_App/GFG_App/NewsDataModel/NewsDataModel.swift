@@ -1,9 +1,3 @@
-//
-//  NewsDataModel.swift
-//  GFG_App
-//
-//  Created by Khyati Dhawan on 01/03/22.
-//
 
 import Foundation
 

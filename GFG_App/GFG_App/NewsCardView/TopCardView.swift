@@ -1,9 +1,3 @@
-//
-//  TopCardView.swift
-//  GFG_App
-//
-//  Created by Khyati Dhawan on 01/03/22.
-//
 
 import Foundation
 import SwiftUI
@@ -14,13 +8,9 @@ struct TopCardView: View {
     var body: some View {
         VStack{
             let url = URL(string: article.enclosure.link)!
-           
-            
             Image("Image").fromData(url: url)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                
-            
             HStack{
                 
                 VStack(alignment: .leading) {
@@ -37,12 +27,12 @@ struct TopCardView: View {
             }.padding()
             
         }
-            .cornerRadius(10)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color(.sRGB, red: 150/255, green: 150/255, blue: 150/255, opacity: 0.1), lineWidth: 1)
-                )
-                .padding([.top, .horizontal])
+        .cornerRadius(10)
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color(.sRGB, red: 150/255, green: 150/255, blue: 150/255, opacity: 0.1), lineWidth: 1)
+        )
+        .padding([.top, .horizontal])
     }
 }
 

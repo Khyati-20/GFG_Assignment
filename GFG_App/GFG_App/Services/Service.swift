@@ -1,9 +1,4 @@
-//
-//  Service.swift
-//  GFG_App
-//
-//  Created by Khyati Dhawan on 01/03/22.
-//
+
 
 import Foundation
 import Alamofire
@@ -22,7 +17,7 @@ class Service: ObservableObject  {
     
     
     init() {
-       updateNews()
+        updateNews()
     }
     
     func getNews (url: URL, completionHandler: @escaping (Data?) -> ()) {
@@ -50,7 +45,7 @@ class Service: ObservableObject  {
         
         let url = URL(string: "https://api.rss2json.com/v1/api.json?rss_url=http://www.abc.net.au/news/feed/51120/rss.xml")!
         getNews(url: url){ result in
-                let news = try! JSONDecoder().decode( Article.self, from: result!)
+            let news = try! JSONDecoder().decode( Article.self, from: result!)
             let article = news
             self.results = article.items
         }

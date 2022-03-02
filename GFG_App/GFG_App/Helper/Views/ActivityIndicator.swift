@@ -1,9 +1,3 @@
-//
-//  ActivityIndicator.swift
-//  GFG_App
-//
-//  Created by Khyati Dhawan on 02/03/22.
-//
 
 import Foundation
 import SwiftUI
